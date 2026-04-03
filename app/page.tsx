@@ -33,40 +33,26 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-black scroll-smooth">
-      {/* Nav */}
-      <nav className="flex justify-between items-center px-8 py-6 border-b border-gray-100">
-        <span className="font-medium tracking-tight">Christina Ma</span>
-        <div className="flex gap-8 text-sm text-gray-500">
-          <a href="#work" className="hover:text-black transition-colors">
-            Work
-          </a>
-          <a href="/resume.pdf" className="hover:text-black transition-colors">
-            Resume
-          </a>
+      {/* Nav + Banner */}
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-100/50 px-8">
+        <div className="flex justify-between items-center py-5">
+          <span className="font-medium tracking-tight text-lg">Christina Ma</span>
+          <div className="flex gap-8 text-sm text-gray-400">
+            <a href="#work" className="hover:text-black transition-colors">
+              Work
+            </a>
+            <a href="/resume.pdf" className="hover:text-black transition-colors">
+              Resume
+            </a>
+          </div>
         </div>
+        <p className="pb-5 text-lg font-light text-gray-400 leading-relaxed max-w-2xl">
+          UX Designer in Irvine, CA — I design apps that help people build better habits, explore stories, and learn with less stress.
+        </p>
       </nav>
 
-      {/* Hero */}
-      <section className="px-8 py-24 max-w-3xl">
-        <p className="text-sm text-gray-400 mb-4 tracking-widest uppercase">
-          UX Designer
-        </p>
-        <h1 className="text-4xl font-medium leading-tight mb-6">
-          <span className="block">
-            Hi! I&apos;m Christina Ma. I design experiences that are simple to
-            use and hard to forget.
-          </span>
-        </h1>
-        <p className="text-gray-500 text-lg leading-relaxed">
-          Based in Irvine, CA. Currently open to work.
-        </p>
-      </section>
-
       {/* Work */}
-      <section id="work" className="px-8 pb-24">
-        <p className="text-xs text-gray-400 tracking-widest uppercase mb-8">
-          Selected Work
-        </p>
+      <section id="work" className="px-8 pt-8 pb-24">
 
         <div className="flex flex-col gap-6">
           {/* Featured project — Little Checks (full width) */}
@@ -143,29 +129,60 @@ export default function Home() {
                 {/* Decorative illustration area */}
                 <div className="relative h-56 overflow-hidden flex items-center justify-center">
                   {project.id === 2 ? (
-                    /* Dear Traveler — book/journey visual */
-                    <div className="flex gap-3 items-end">
-                      <div className="w-16 h-20 bg-white/40 rounded-lg transition-transform duration-500 group-hover:-translate-y-1" />
-                      <div className="w-20 h-28 bg-white/60 rounded-lg shadow-sm transition-transform duration-500 group-hover:-translate-y-2" />
-                      <div className="w-16 h-20 bg-white/40 rounded-lg transition-transform duration-500 group-hover:-translate-y-1" />
+                    /* Dear Traveler — real phone screenshots */
+                    <div className="relative w-full h-full flex items-center justify-center gap-3 pt-4">
+                      <div className="relative w-28 h-48 rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:-translate-y-2 -rotate-3">
+                        <Image
+                          src="/projects/dt-intro.png"
+                          alt="Dear Traveler story intro"
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </div>
+                      <div className="relative w-28 h-48 rounded-2xl overflow-hidden shadow-xl transition-transform duration-500 group-hover:-translate-y-3 z-10">
+                        <Image
+                          src="/projects/dt-choice.png"
+                          alt="Dear Traveler story choice"
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </div>
+                      <div className="relative w-28 h-48 rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:-translate-y-2 rotate-3">
+                        <Image
+                          src="/projects/dt-badend.png"
+                          alt="Dear Traveler bad end screen"
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </div>
                     </div>
                   ) : (
-                    /* Student Testing — grid/form visual */
-                    <div className="grid grid-cols-3 gap-2 p-4 transition-transform duration-500 group-hover:scale-105">
-                      {Array.from({ length: 9 }).map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-14 h-10 rounded-lg"
-                          style={{
-                            backgroundColor:
-                              i % 3 === 0
-                                ? "rgba(255,255,255,0.6)"
-                                : i % 3 === 1
-                                ? "rgba(255,255,255,0.4)"
-                                : "rgba(255,255,255,0.25)",
-                          }}
+                    /* Student Testing — real screenshots */
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <div className="relative w-48 h-36 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:-translate-y-1 -rotate-3">
+                        <Image
+                          src="/projects/stp-dashboard.png"
+                          alt="Student Testing Platform dashboard"
+                          fill
+                          className="object-cover"
                         />
-                      ))}
+                      </div>
+                      <div className="absolute right-8 top-8 w-32 h-28 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:-translate-y-2 rotate-2">
+                        <Image
+                          src="/projects/stp-avatar.png"
+                          alt="Student avatar selection"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="absolute left-6 bottom-4 w-40 h-28 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:-translate-y-1 rotate-1">
+                        <Image
+                          src="/projects/stp-quiz.png"
+                          alt="Student quiz interface"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   )}
                 </div>
