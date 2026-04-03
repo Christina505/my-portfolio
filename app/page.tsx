@@ -1,65 +1,84 @@
-import Image from "next/image";
-
 export default function Home() {
+  const projects = [
+    {
+      id: 1,
+      title: "Little Checks",
+      description: "A productivity app designed to help users build habits and stay on top of daily tasks. Available on the App Store.",
+      tags: ["UX Design", "Mobile", "end-to-end", "App Store"],
+      bg: "#F0EDE8",
+    },
+    {
+      id: 2,
+      title: "Dear Traveler",
+      description: "An interactive story app that puts the reader in control of their journey. Available on the App Store.",
+      tags: ["Interaction Design", "Storytelling", "App Store", "end-to-end"],
+      bg: "#E8EDF0",
+    },
+    {
+      id: 3,
+      title: "Student Testing Platform",
+      description: "A Figma mockup reimagining the student testing experience — focused on reducing anxiety and improving clarity.",
+      tags: ["UX Research", "Figma", "Web"],
+      bg: "#EDE8F0",
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+  <main className="min-h-screen bg-white text-black scroll-smooth">
+
+      {/* Nav */}
+      <nav className="flex justify-between items-center px-8 py-6 border-b border-gray-100">
+        <span className="font-medium tracking-tight">Christina Ma</span>
+        <div className="flex gap-8 text-sm text-gray-500">
+          <a href="#work" className="hover:text-black transition-colors">Work</a>
+          <a href="/resume.pdf" className="hover:text-black transition-colors">Resume</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </nav>
+
+      {/* Hero */}
+      <section className="px-8 py-24 max-w-3xl">
+        <p className="text-sm text-gray-400 mb-4 tracking-widest uppercase">UX Designer</p>
+        <h1 className="text-4xl font-medium leading-tight mb-6">
+          <span className="block">Hi! I'm Christina Ma. I design experiences that are simple to use and hard to forget.</span>
+        </h1>
+        <p className="text-gray-500 text-lg leading-relaxed">
+          Based in Irvine, CA. Currently open to work.
+        </p>
+      </section>
+
+      {/* Work */}
+      <section id="work" className="px-8 pb-24">
+        <p className="text-xs text-gray-400 tracking-widest uppercase mb-8">Selected Work</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="rounded-2xl p-8 cursor-pointer transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-md"
+              style={{ backgroundColor: project.bg }}
+            >
+              <div className="flex gap-2 mb-12">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="text-xs text-gray-500 border border-gray-300 rounded-full px-3 py-1">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h2 className="text-xl font-medium mb-2">{project.title}</h2>
+              <p className="text-sm text-gray-500">{project.description}</p>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-8 py-8 border-t border-gray-100 flex justify-between items-center text-sm text-gray-400">
+        <span>Christina Ma</span>
+        <div className="flex gap-6">
+          <a href="mailto:wuxuan.ma@gmail.com" className="hover:text-black transition-colors">Email</a>
+          <a href="https://linkedin.com/in/yourhandle" className="hover:text-black transition-colors">LinkedIn</a>
+        </div>
+      </footer>
+
+    </main>
   );
 }
