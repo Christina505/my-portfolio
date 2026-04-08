@@ -16,3 +16,26 @@ body {
   color: var(--foreground);
   font-family: var(--font-dm-sans), sans-serif;
 }
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure nav tap targets are comfortable on mobile */
+@media (max-width: 640px) {
+  nav a, header a, footer a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
