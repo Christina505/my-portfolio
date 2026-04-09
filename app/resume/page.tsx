@@ -46,7 +46,7 @@ export default function ResumePage() {
         {/* Summary */}
         <div className="mb-10">
           <p className="text-gray-500 leading-relaxed">
-            UX designer with 8+ years of experience observing how first-time users interact with products. I teach kindergarten full-time, which means I watch five-year-olds navigate new interfaces every day — and I bring that perspective to everything I design. I've shipped two apps to the App Store end-to-end (design, code, and launch) and I'm fluent in English and Mandarin.
+            UX designer with 8+ years of experience observing how first-time users interact with products. I teach kindergarten full-time, which means I watch five-year-olds navigate new interfaces every day — and I bring that perspective to everything I design. I&apos;ve shipped two apps to the App Store end-to-end (design, code, and launch) and I&apos;m fluent in English and Mandarin.
           </p>
         </div>
 

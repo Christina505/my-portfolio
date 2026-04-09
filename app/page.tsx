@@ -131,15 +131,13 @@ export default function Home() {
           {/* Two-column row for other projects */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.slice(1).map((project) => {
-              const CardWrapper = project.href ? Link : "div";
-              const cardProps = project.href ? { href: project.href } : {};
               return (
-              <CardWrapper
-                key={project.id}
-                {...cardProps}
-                className="group rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 ease-out hover:shadow-lg block"
-                style={{ backgroundColor: project.bg }}
-              >
+                <Link
+                  key={project.id}
+                  href={project.href || "#"}
+                  className="group rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 ease-out hover:shadow-lg block"
+                  style={{ backgroundColor: project.bg }}
+                >
                 {/* Decorative illustration area */}
                 <div className="relative h-52 sm:h-56 overflow-hidden flex items-center justify-center">
                   {project.id === 2 ? (
@@ -223,7 +221,7 @@ export default function Home() {
                     View project →
                   </span>
                 </div>
-              </CardWrapper>
+              </Link>
               );
             })}
           </div>
