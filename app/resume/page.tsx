@@ -39,7 +39,7 @@ export default function ResumePage() {
             <span className="text-gray-200 hidden sm:inline">·</span>
             <a href="mailto:wuxuan.ma@gmail.com" className="hover:text-black transition-colors">wuxuan.ma@gmail.com</a>
             <span className="text-gray-200 hidden sm:inline">·</span>
-            <a href="https://linkedin.com/in/christina-ma" className="hover:text-black transition-colors">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/christina-ma-a564a3a4/" className="hover:text-black transition-colors">LinkedIn</a>
           </div>
         </div>
 
@@ -162,7 +162,7 @@ export default function ResumePage() {
         <span>Christina Ma</span>
         <div className="flex gap-6">
           <a href="mailto:wuxuan.ma@gmail.com" className="hover:text-black transition-colors">Email</a>
-          <a href="https://linkedin.com/in/christina-ma" className="hover:text-black transition-colors">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/christina-ma-a564a3a4/" className="hover:text-black transition-colors">LinkedIn</a>
         </div>
       </footer>
     </main>

@@ -239,7 +239,7 @@ export default function Home() {
             Email
           </a>
           <a
-            href="https://linkedin.com/in/christina-ma"
+            href="https://www.linkedin.com/in/christina-ma-a564a3a4/"
             className="hover:text-black transition-colors"
           >
             LinkedIn
