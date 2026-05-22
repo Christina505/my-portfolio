@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HabitDemo from "@/app/components/HabitDemo";
 
 export default function LittleChecksCaseStudy() {
   return (
@@ -63,6 +64,9 @@ export default function LittleChecksCaseStudy() {
           </div>
         </div>
       </section>
+
+      {/* Interactive demo — visitors can use a tiny version of the app */}
+      <HabitDemo />
 
       {/* Overview */}
       <section className="px-5 md:px-8 pb-16 max-w-3xl mx-auto">
