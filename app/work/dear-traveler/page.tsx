@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import StoryDemo from "@/app/components/StoryDemo";
 
 export default function DearTravelerCaseStudy() {
   return (
@@ -121,31 +122,67 @@ export default function DearTravelerCaseStudy() {
         </div>
       </section>
 
-      {/* App Screens — story progression */}
+      {/* Interactive story demo — try a real branch */}
+      <StoryDemo />
+
+      {/* App Screens — auto-marquee, pauses on hover */}
       <section className="px-5 md:px-8 pb-16 max-w-3xl mx-auto">
+        {/* Inline keyframes so the marquee is bulletproof to CSS cache state. */}
+        <style>{`
+          @keyframes dt-marquee-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+          }
+          .dt-marquee {
+            animation: dt-marquee-left 28s linear infinite;
+            will-change: transform;
+          }
+          .dt-marquee:hover { animation-play-state: paused; }
+          @media (prefers-reduced-motion: reduce) {
+            .dt-marquee { animation: none; }
+          }
+        `}</style>
         <div className="rounded-3xl overflow-hidden bg-[#3D3224] p-4 sm:p-6 md:p-10">
-          <div className="flex items-end justify-start sm:justify-center gap-2 sm:gap-3 md:gap-5 overflow-x-auto pb-2 scrollbar-hide">
-            <div className="relative w-20 sm:w-24 md:w-28 aspect-[9/19.5] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
-              <Image src="/projects/dt-intro.png" alt="Story intro" fill className="object-contain" />
-            </div>
-            <div className="relative w-20 sm:w-24 md:w-28 aspect-[9/19.5] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
-              <Image src="/projects/dt-choice.png" alt="Making a choice" fill className="object-contain" />
-            </div>
-            <div className="relative w-20 sm:w-24 md:w-28 aspect-[9/19.5] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
-              <Image src="/projects/dt-wait.png" alt="Wait timer" fill className="object-contain" />
-            </div>
-            <div className="relative w-20 sm:w-24 md:w-28 aspect-[9/19.5] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
-              <Image src="/projects/dt-tension.png" alt="Tension building" fill className="object-contain" />
-            </div>
-            <div className="relative w-20 sm:w-24 md:w-28 aspect-[9/19.5] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
-              <Image src="/projects/dt-climax.png" alt="Emotional climax" fill className="object-contain" />
-            </div>
-            <div className="relative w-20 sm:w-24 md:w-28 aspect-[9/19.5] rounded-lg overflow-hidden shadow-lg flex-shrink-0">
-              <Image src="/projects/dt-badend.png" alt="Bad End" fill className="object-contain" />
-            </div>
+          {/* Phones rendered twice so the -50% slide loops seamlessly. */}
+          <div className="flex items-end gap-2 sm:gap-3 md:gap-5 w-max dt-marquee">
+            {[
+              { src: "/projects/dt-intro.png", alt: "Story intro" },
+              { src: "/projects/dt-choice.png", alt: "Making a choice" },
+              { src: "/projects/dt-wait.png", alt: "Wait timer" },
+              { src: "/projects/dt-tension.png", alt: "Tension building" },
+              { src: "/projects/dt-climax.png", alt: "Emotional climax" },
+              { src: "/projects/dt-badend.png", alt: "Bad End" },
+            ]
+              .concat(
+                // Duplicate set for the seamless loop; hidden from a11y.
+                [
+                  { src: "/projects/dt-intro.png", alt: "" },
+                  { src: "/projects/dt-choice.png", alt: "" },
+                  { src: "/projects/dt-wait.png", alt: "" },
+                  { src: "/projects/dt-tension.png", alt: "" },
+                  { src: "/projects/dt-climax.png", alt: "" },
+                  { src: "/projects/dt-badend.png", alt: "" },
+                ],
+              )
+              .map((screen, i) => (
+                <div
+                  key={i}
+                  aria-hidden={i >= 6 ? true : undefined}
+                  className="relative w-20 sm:w-24 md:w-28 aspect-[9/19.5] rounded-lg overflow-hidden shadow-lg flex-shrink-0"
+                >
+                  <Image
+                    src={screen.src}
+                    alt={screen.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
           </div>
         </div>
-        <p className="text-sm text-gray-400 text-center mt-4">The story unfolds left to right — from the first diary entry, through choices and tension, to the ending.</p>
+        <p className="text-sm text-gray-400 text-center mt-4">
+          The story in motion — hover to pause.
+        </p>
       </section>
 
       {/* Iteration */}

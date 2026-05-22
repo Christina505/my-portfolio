@@ -130,3 +130,27 @@ video::-webkit-media-controls-panel {
 .animate-star-burst {
   animation: star-burst 0.95s cubic-bezier(0.34, 1.46, 0.64, 1) both;
 }
+
+/* Right-to-left marquee for the Dear Traveler app-screens row. Phones are
+   rendered twice in the row; sliding the row by -50% lands the second set
+   exactly where the first set started, so the loop is seamless.
+   Class name is intentionally NOT `animate-*` to avoid Tailwind v4 grabbing it. */
+@keyframes dt-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.dt-marquee {
+  animation: dt-marquee-left 28s linear infinite;
+}
+.dt-marquee:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dt-marquee {
+    animation: none;
+  }
+}
