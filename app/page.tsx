@@ -575,6 +575,63 @@ export default function Home() {
               </div>
             </Link>
           </div>
+
+          {/* ABC Countdown — in progress, "next up" card */}
+          <Link
+            href="/work/abc-countdown"
+            className="group rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 ease-out hover:shadow-2xl hover:-translate-y-1 block"
+            style={{ backgroundColor: "#FFF4E0" }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* Text side */}
+              <div className="p-10 md:p-12 flex flex-col justify-between order-2 md:order-1">
+                <div>
+                  {/* "In the workshop" badge with pulsing dot */}
+                  <div className="inline-flex items-center gap-2 mb-6 text-xs font-medium text-amber-800 bg-white/70 rounded-full px-3 py-1.5">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
+                    </span>
+                    In the workshop
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {["3D Game", "Unity", "Blender", "AI"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs text-gray-500 bg-white/60 rounded-full px-3 py-1"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h2 className="text-3xl font-semibold mb-3 tracking-tight">
+                    ABC Countdown
+                  </h2>
+                  <p className="text-gray-500 leading-relaxed max-w-sm">
+                    Let&apos;s travel back in time to experience the pure fun and excitement of being a kindergartener — where you vividly remember the sunshine leaking through the layered leaves one afternoon, and your friend running to you the moment you arrived at school.
+                  </p>
+                </div>
+                <div className="mt-8 flex items-center gap-2">
+                  <span className="text-sm text-gray-400 group-hover:text-gray-600 transition-colors">
+                    Peek at the workshop →
+                  </span>
+                </div>
+              </div>
+
+              {/* Visual side — ABC alphabet blocks that wiggle on hover */}
+              <div className="relative h-56 md:h-auto overflow-hidden flex items-center justify-center gap-3 md:gap-5 py-12 md:py-0 order-1 md:order-2">
+                <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl flex items-center justify-center text-3xl md:text-5xl font-bold text-white bg-[#E04E3F] shadow-[0_8px_0_rgba(0,0,0,0.12)] -rotate-6 transition-all duration-700 group-hover:-translate-y-2 group-hover:-rotate-12">
+                  A
+                </div>
+                <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl flex items-center justify-center text-3xl md:text-5xl font-bold text-white bg-[#3E6FE0] shadow-[0_8px_0_rgba(0,0,0,0.12)] -translate-y-3 transition-all duration-700 delay-100 group-hover:-translate-y-6 group-hover:scale-105">
+                  B
+                </div>
+                <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl flex items-center justify-center text-3xl md:text-5xl font-bold text-white bg-[#F1B832] shadow-[0_8px_0_rgba(0,0,0,0.12)] rotate-6 transition-all duration-700 delay-200 group-hover:-translate-y-2 group-hover:rotate-12">
+                  C
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
 
