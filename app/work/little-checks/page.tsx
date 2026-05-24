@@ -81,7 +81,7 @@ export default function LittleChecksCaseStudy() {
           </div>
           <div>
             <p className="text-xs text-gray-400 uppercase tracking-widest mb-2">Timeline</p>
-            <p className="text-sm">Nov 2025 — present</p>
+            <p className="text-sm">Nov 2025 — 2026</p>
           </div>
         </div>
 

@@ -77,7 +77,7 @@ export default function ResumePage() {
           <Entry
             title="Little Checks — Habit Tracking App"
             subtitle="Designer & Developer · App Store"
-            date="2025"
+            date="2026"
             bullets={[
               "Designed and built a habit-tracking iOS app end-to-end in SwiftUI, from concept to App Store launch",
               "Based on the behavior charts I use with my kindergartners — adapted a proven classroom model into a consumer product for adults",
@@ -98,7 +98,7 @@ export default function ResumePage() {
           <Entry
             title="Student Testing Platform — UX Research Case Study"
             subtitle="UX Researcher & Designer"
-            date="2024–2025"
+            date="2025"
             bullets={[
               "Observed hundreds of kindergarten and elementary students taking standardized tests, documenting 10 distinct steps and pain points",
               "Redesigned the student testing experience in Figma with reduced cognitive load, friendlier UI, and clearer navigation",
