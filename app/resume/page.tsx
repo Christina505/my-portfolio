@@ -131,7 +131,7 @@ export default function ResumePage() {
           />
           <Entry
             title="Lead Mandarin Immersion Teacher (Grade 5–6)"
-            subtitle="East Lake Elementary · Eagle Mountain, UT"
+            subtitle="East Lake Elementary · South Jordan, UT"
             date="2018 – 2021"
             bullets={[
               "Led curriculum design for a dual-language immersion program, creating materials that work across languages and cultures",
