@@ -49,7 +49,7 @@ export default function ResumePage() {
         {/* Summary */}
         <div className="mb-10">
           <p className="text-gray-500 leading-relaxed">
-            Product designer with 8+ years of experience observing how first-time users interact with products. I teach kindergarten full-time, which means I watch five-year-olds navigate new interfaces every day — and I bring that perspective to everything I design. I&apos;ve shipped two apps to the App Store end-to-end (design, code, and launch) and I&apos;m fluent in English and Mandarin.
+            Product designer with 8+ years of experience observing how first-time users interact with products. I teach kindergarten full-time, which means I watch five-year-olds navigate new interfaces every day — and I bring that perspective to everything I design. I&apos;ve shipped two apps to the App Store end-to-end — design, build, and launch — and I&apos;m fluent in English and Mandarin.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export default function ResumePage() {
         {/* Download */}
         <div className="mt-12 pt-8 border-t border-gray-100">
           <a
-            href="/christina-ma-ux-resume.pdf"
+            href="/christina-ma-product-designer-resume.pdf"
             download
             className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-black transition-colors"
           >
