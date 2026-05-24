@@ -49,7 +49,7 @@ export default function ResumePage() {
         {/* Summary */}
         <div className="mb-10">
           <p className="text-gray-500 leading-relaxed">
-            Product designer with 8+ years of experience observing how first-time users interact with products. I teach kindergarten full-time, which means I watch five-year-olds navigate new interfaces every day — and I bring that perspective to everything I design. I&apos;ve shipped two apps to the App Store end-to-end — design, build, and launch — and I&apos;m fluent in English and Mandarin.
+            Product designer and educator focused on first-time user behavior, onboarding, and intuitive interaction design. I&apos;ve shipped two App Store apps end-to-end and bring a strong understanding of user psychology, engagement, and accessibility from years of classroom observation. I&apos;m fluent in English and Mandarin.
           </p>
         </div>
 
