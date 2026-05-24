@@ -315,16 +315,32 @@ export default function Home() {
       <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-100/50 px-5 md:px-8 py-4 md:py-6">
         <div className="flex justify-between items-start gap-4">
           <div className="min-w-0">
-            <h1 className="text-lg md:text-xl font-medium tracking-tight mb-1">Christina Ma</h1>
+            <h1 className="text-lg md:text-xl font-medium tracking-tight mb-1.5">
+              Christina Ma
+            </h1>
+            {/* Job-hunt availability — pulsing green dot draws the eye */}
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-1.5 mb-2 text-[11px] md:text-xs font-medium text-emerald-800 bg-emerald-50 rounded-full px-2.5 py-0.5 hover:bg-emerald-100 transition-colors"
+            >
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+              </span>
+              Open to Product Designer roles
+            </a>
             <p className="text-xs md:text-sm font-light text-gray-400 leading-relaxed max-w-lg hidden sm:block">
-              UX Designer in Irvine, CA — I teach kindergarten, so I design things that are intuitive for first-time users. If a five-year-old can figure it out, anyone can.
+              Product Designer in Irvine, CA — I teach kindergarten, so I design things that are intuitive for first-time users. If a five-year-old can figure it out, anyone can.
             </p>
             <p className="text-xs font-light text-gray-400 leading-relaxed sm:hidden">
-              UX Designer in Irvine, CA
+              Product Designer in Irvine, CA
             </p>
           </div>
           <div className="flex gap-4 md:gap-8 text-sm text-gray-400 pt-1 flex-shrink-0">
             <span className="text-black font-medium">Work</span>
+            <Link href="/about" className="hover:text-black transition-colors">
+              About
+            </Link>
             <Link href="/resume" className="hover:text-black transition-colors">
               Resume
             </Link>
@@ -632,6 +648,80 @@ export default function Home() {
               </div>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* Let's talk — job hunt CTA */}
+      <section id="contact" className="px-5 md:px-8 pb-20 max-w-3xl mx-auto scroll-mt-32">
+        {/* Inline keyframes — guaranteed to ship regardless of CSS cache state */}
+        <style>{`
+          /* Waving-hand emoji next to the heading. Waves briefly, then rests. */
+          @keyframes ct-wave {
+            0%, 35%, 100% { transform: rotate(0deg); }
+            7%, 21%       { transform: rotate(18deg); }
+            14%, 28%      { transform: rotate(-10deg); }
+          }
+          .ct-wave {
+            display: inline-block;
+            transform-origin: 70% 80%;
+            animation: ct-wave 3s ease-in-out infinite;
+          }
+          /* Soft emerald ripple behind the primary button to draw the eye. */
+          @keyframes ct-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+            50%      { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+          }
+          .ct-pulse { animation: ct-pulse 2.4s ease-in-out infinite; }
+          @media (prefers-reduced-motion: reduce) {
+            .ct-wave, .ct-pulse { animation: none; }
+          }
+        `}</style>
+        <div className="rounded-3xl bg-emerald-50 p-8 md:p-12">
+          <div className="inline-flex items-center gap-2 mb-4 text-xs font-medium text-emerald-800">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            CURRENTLY
+          </div>
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+            Let&apos;s talk{" "}
+            <span className="ct-wave" aria-hidden="true">
+              👋
+            </span>
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-6 max-w-xl">
+            I&apos;m looking for Product Designer roles — remote, hybrid, or in Orange County / LA. If you&apos;re hiring or just want to chat, I&apos;d love to hear from you.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="mailto:wuxuan.ma@gmail.com"
+              className="ct-pulse inline-flex items-center gap-2 bg-black text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-gray-800 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+            >
+              Email me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/christina-ma-a564a3a4/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white border border-gray-200 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+            >
+              LinkedIn
+            </a>
+            <Link
+              href="/resume"
+              className="inline-flex items-center gap-2 bg-white border border-gray-200 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+            >
+              Resume
+            </Link>
+          </div>
+          {/* Fallback for visitors whose browser doesn't handle mailto: well. */}
+          <p className="text-xs text-gray-500 mt-4">
+            or copy:{" "}
+            <span className="text-gray-700 font-medium select-all">
+              wuxuan.ma@gmail.com
+            </span>
+          </p>
         </div>
       </section>
 
