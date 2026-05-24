@@ -11,15 +11,18 @@ export default function ResumePage() {
               <h1 className="text-lg md:text-xl font-medium tracking-tight mb-1">Christina Ma</h1>
             </Link>
             <p className="text-xs md:text-sm font-light text-gray-400 leading-relaxed max-w-lg hidden sm:block">
-              UX Designer in Irvine, CA — I teach kindergarten, so I design things that are intuitive for first-time users. If a five-year-old can figure it out, anyone can.
+              Product Designer in Irvine, CA — I teach kindergarten, so I design things that are intuitive for first-time users. If a five-year-old can figure it out, anyone can.
             </p>
             <p className="text-xs font-light text-gray-400 leading-relaxed sm:hidden">
-              UX Designer in Irvine, CA
+              Product Designer in Irvine, CA
             </p>
           </div>
           <div className="flex gap-4 md:gap-8 text-sm text-gray-400 pt-1 flex-shrink-0">
             <Link href="/" className="hover:text-black transition-colors">
               Work
+            </Link>
+            <Link href="/about" className="hover:text-black transition-colors">
+              About
             </Link>
             <span className="text-black font-medium">
               Resume
@@ -33,7 +36,7 @@ export default function ResumePage() {
         {/* Header */}
         <div className="mb-10">
           <h2 className="text-3xl font-semibold tracking-tight mb-2">Christina Ma</h2>
-          <p className="text-lg text-gray-400 mb-4">UX Designer</p>
+          <p className="text-lg text-gray-400 mb-4">Product Designer</p>
           <div className="flex flex-wrap gap-x-3 sm:gap-x-4 gap-y-1 text-sm text-gray-400">
             <span>Irvine, CA</span>
             <span className="text-gray-200 hidden sm:inline">·</span>
@@ -46,7 +49,7 @@ export default function ResumePage() {
         {/* Summary */}
         <div className="mb-10">
           <p className="text-gray-500 leading-relaxed">
-            UX designer with 8+ years of experience observing how first-time users interact with products. I teach kindergarten full-time, which means I watch five-year-olds navigate new interfaces every day — and I bring that perspective to everything I design. I&apos;ve shipped two apps to the App Store end-to-end (design, code, and launch) and I&apos;m fluent in English and Mandarin.
+            Product designer with 8+ years of experience observing how first-time users interact with products. I teach kindergarten full-time, which means I watch five-year-olds navigate new interfaces every day — and I bring that perspective to everything I design. I&apos;ve shipped two apps to the App Store end-to-end (design, code, and launch) and I&apos;m fluent in English and Mandarin.
           </p>
         </div>
 
