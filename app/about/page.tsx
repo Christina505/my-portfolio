@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
@@ -25,16 +26,34 @@ export default function About() {
       </nav>
 
       {/* Hero */}
-      <section className="px-5 md:px-8 pt-16 pb-10 max-w-2xl mx-auto">
-        <p className="text-xs text-gray-400 uppercase tracking-widest mb-4">
-          About
-        </p>
-        <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-tight mb-4">
-          Christina Ma
-        </h1>
-        <p className="text-xl font-light text-gray-400">
-          Product Designer in Irvine, California.
-        </p>
+      <section className="px-5 md:px-8 pt-16 pb-10 max-w-3xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
+          {/* Text — order-2 on mobile so the photo introduces you first */}
+          <div className="order-2 md:order-1 flex-1">
+            <p className="text-xs text-gray-400 uppercase tracking-widest mb-4">
+              About
+            </p>
+            <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-tight mb-4">
+              Christina Ma
+            </h1>
+            <p className="text-xl font-light text-gray-400">
+              Product Designer in Irvine, California.
+            </p>
+          </div>
+          {/* Photo */}
+          <div className="order-1 md:order-2 w-40 md:w-48 flex-shrink-0">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/christina.png"
+                alt="Christina Ma"
+                fill
+                sizes="(max-width: 768px) 160px, 192px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Narrative */}
