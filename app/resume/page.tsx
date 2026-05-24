@@ -56,14 +56,24 @@ export default function ResumePage() {
         {/* Skills */}
         <Section title="Skills">
           <div className="space-y-2">
-            <SkillRow label="Design" items="UX/UI Design, User Research, Interaction Design, Prototyping, Wireframing, Information Architecture, Usability Testing" />
-            <SkillRow label="Tools" items="Figma, SwiftUI, Xcode, VScode" />
+            <SkillRow label="Design" items="Product Design, User Research, Interaction Design, Prototyping, Wireframing, Information Architecture, Usability Testing" />
+            <SkillRow label="Tools" items="Figma, SwiftUI, Xcode, Unity, Blender, VS Code, GarageBand, AI coding tools" />
             <SkillRow label="Other" items="Bilingual (English & Mandarin), Localization, Storytelling, Curriculum Design, Cross-Cultural Communication" />
           </div>
         </Section>
 
         {/* Projects */}
         <Section title="Projects">
+          <Entry
+            title="ABC Countdown — 3D Nostalgia Game"
+            subtitle="Designer & Developer · In Progress"
+            date="2026"
+            bullets={[
+              "Designing a 3D game where adults relive the wonder of being a kindergartener — each letter of the ABC countdown is a mini-game",
+              "Building in Unity with Blender for 3D modeling and AI coding tools for development",
+              "Writing the story, designing the worlds, and shipping end-to-end as designer-developer",
+            ]}
+          />
           <Entry
             title="Little Checks — Habit Tracking App"
             subtitle="Designer & Developer · App Store"
