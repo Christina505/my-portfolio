@@ -11,7 +11,7 @@ export default function ResumePage() {
               <h1 className="text-lg md:text-xl font-medium tracking-tight mb-1">Christina Ma</h1>
             </Link>
             <p className="text-xs md:text-sm font-light text-gray-400 leading-relaxed max-w-lg hidden sm:block">
-              Product Designer in Irvine, CA — I teach kindergarten, so I design things that are intuitive for first-time users. If a five-year-old can figure it out, anyone can.
+              Product Designer in Irvine, CA. I teach kindergarten, so I design things that are intuitive for first-time users. If a five-year-old can figure it out, anyone can.
             </p>
             <p className="text-xs font-light text-gray-400 leading-relaxed sm:hidden">
               Product Designer in Irvine, CA
@@ -49,7 +49,7 @@ export default function ResumePage() {
         {/* Summary */}
         <div className="mb-10">
           <p className="text-gray-500 leading-relaxed">
-            Product designer and educator focused on first-time user behavior, onboarding, and intuitive interaction design. I&apos;ve shipped two App Store apps end-to-end and bring a strong understanding of user psychology, engagement, and accessibility from years of classroom observation. I&apos;m fluent in English and Mandarin.
+            Product designer and educator who has taught hundreds of young children, so I design user flows intuitive enough for a five-year-old to follow on the first try. I&apos;ve spent years watching real users meet new tools for the first time, which is the core of how I approach onboarding, first-time user behavior, and interaction design. I&apos;ve shipped two App Store apps end-to-end and bring a deep understanding of user psychology, engagement, and accessibility. Fluent in English and Mandarin.
           </p>
         </div>
 
@@ -65,28 +65,18 @@ export default function ResumePage() {
         {/* Projects */}
         <Section title="Projects">
           <Entry
-            title="ABC Countdown — 3D Nostalgia Game"
-            subtitle="Designer & Developer · In Progress"
-            date="2026"
-            bullets={[
-              "Designing a 3D game where adults relive the wonder of being a kindergartener — each letter of the ABC countdown is a mini-game",
-              "Building in Unity with Blender for 3D modeling and AI coding tools for development",
-              "Writing the story, designing the worlds, and shipping end-to-end as designer-developer",
-            ]}
-          />
-          <Entry
-            title="Little Checks — Habit Tracking App"
+            title="Little Checks · Habit Tracking App"
             subtitle="Designer & Developer · App Store"
             date="2026"
             bullets={[
               "Designed and built a habit-tracking iOS app end-to-end in SwiftUI, from concept to App Store launch",
-              "Based on the behavior charts I use with my kindergartners — adapted a proven classroom model into a consumer product for adults",
+              "Based on the behavior charts I use with my kindergartners, adapting a proven classroom model into a consumer product for adults",
               "Conducted competitive analysis of 5+ habit apps, identifying gaps in simplicity and delight",
               "Built with screen-size adapting, Mandarin localization, and edge-case handling for a polished experience",
             ]}
           />
           <Entry
-            title="Dear Traveler — Interactive Story Game"
+            title="Dear Traveler · Interactive Story Game"
             subtitle="Designer, Writer & Developer · App Store"
             date="2025"
             bullets={[
@@ -96,13 +86,23 @@ export default function ResumePage() {
             ]}
           />
           <Entry
-            title="Student Testing Platform — UX Research Case Study"
+            title="Student Testing Platform · UX Research Case Study"
             subtitle="UX Researcher & Designer"
             date="2025"
             bullets={[
               "Observed hundreds of kindergarten and elementary students taking standardized tests, documenting 10 distinct steps and pain points",
               "Redesigned the student testing experience in Figma with reduced cognitive load, friendlier UI, and clearer navigation",
               "Raised usability concerns directly to testing platform vendors based on real classroom observations",
+            ]}
+          />
+          <Entry
+            title="ABC Countdown · 3D Nostalgia Game"
+            subtitle="Designer & Developer · In Progress"
+            date="2026"
+            bullets={[
+              "Designing a 3D game where adults relive the wonder of being a kindergartener, where each letter of the ABC countdown is its own mini-game",
+              "Building in Unity with Blender for 3D modeling and AI coding tools for development",
+              "Writing the story, designing the worlds, and shipping end-to-end as designer-developer",
             ]}
           />
         </Section>
@@ -112,9 +112,9 @@ export default function ResumePage() {
           <Entry
             title="Mandarin Immersion Teacher"
             subtitle="Irvine International Academy · Irvine, CA"
-            date="2023 – Present"
+            date="2023 to Present"
             bullets={[
-              "Observe how 5–6-year-olds interact with new tools and interfaces daily — direct insight into first-time user behavior",
+              "Observe how 5 to 6-year-olds interact with new tools and interfaces daily, giving direct insight into first-time user behavior",
               "Design lesson plans and classroom systems that translate complex concepts into intuitive, step-by-step experiences",
               "Integrate educational technology into curriculum, evaluating apps and platforms for usability with young learners",
               "Developed behavior-chart system that became the design foundation for Little Checks app",
@@ -123,16 +123,16 @@ export default function ResumePage() {
           <Entry
             title="University Writing Instructor"
             subtitle="University of Washington · Seattle, WA"
-            date="2022 – 2023"
+            date="2022 to 2023"
             bullets={[
               "Taught business and biology writing to undergraduate students, structuring information for clarity and accessibility",
               "Designed course materials and assignments with a focus on clear communication and logical information flow",
             ]}
           />
           <Entry
-            title="Lead Mandarin Immersion Teacher (Grade 5–6)"
+            title="Lead Mandarin Immersion Teacher (Grade 5 to 6)"
             subtitle="East Lake Elementary · South Jordan, UT"
-            date="2018 – 2021"
+            date="2018 to 2021"
             bullets={[
               "Led curriculum design for a dual-language immersion program, creating materials that work across languages and cultures",
               "Managed 30+ students through project-based learning, iterating on materials based on student feedback and outcomes",
@@ -145,13 +145,13 @@ export default function ResumePage() {
           <Entry
             title="Master of Arts, TESOL"
             subtitle="University of Washington · Seattle, WA"
-            date="2021 – 2023"
+            date="2021 to 2023"
           />
           <Entry
             title="Bachelor of Science, Elementary Education"
             subtitle="Brigham Young University · Provo, UT"
-            date="2013 – 2018"
-            extra="Minor: TESOL · Dual Language Immersion · Multiple Subject Teaching Credential, CA (Cleared) · BAMA K–12 English & Mandarin · Single Subject Teaching Credential (Mandarin), CA (Cleared)"
+            date="2013 to 2018"
+            extra="Minor: TESOL · Dual Language Immersion · Multiple Subject Teaching Credential, CA (Cleared) · BAMA K-12 English & Mandarin · Single Subject Teaching Credential (Mandarin), CA (Cleared)"
           />
         </Section>
 
