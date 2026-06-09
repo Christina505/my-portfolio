@@ -28,7 +28,7 @@ export default function About() {
       {/* Hero */}
       <section className="px-5 md:px-8 pt-16 pb-10 max-w-3xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
-          {/* Text — order-2 on mobile so the photo introduces you first */}
+          {/* Text: order-2 on mobile so the photo introduces you first */}
           <div className="order-2 md:order-1 flex-1">
             <p className="text-xs text-gray-400 uppercase tracking-widest mb-4">
               About
@@ -59,17 +59,17 @@ export default function About() {
       {/* Narrative */}
       <section className="px-5 md:px-8 pb-12 max-w-2xl mx-auto space-y-6 text-gray-600 leading-relaxed">
         <p>
-          By day I teach kindergarten. By night and on weekends I design and ship things — two apps on the App Store, a research project on student testing, and right now a 3D nostalgia game about kindergarten.
+          By day I teach kindergarten. By night and on weekends I design and build things: two apps on the App Store, a research project on student testing, and right now a 3D nostalgia game about kindergarten.
         </p>
         <p>
-          Teaching kindergarten is the best UX bootcamp I could&apos;ve asked for. Five-year-olds are the most honest users on earth. If a button doesn&apos;t make sense to them, they don&apos;t pretend it does — they walk away. Designing for them taught me to obsess over the first three seconds of any interaction and to never take my own designs for granted.
+          Teaching kindergarten is the best UX bootcamp I could&apos;ve asked for. Five-year-olds are the most honest users on earth. If a button doesn&apos;t make sense to them, they don&apos;t pretend it does — they cry. Designing for them taught me to obsess over the first three seconds of any interaction and to never take my own designs for granted.
         </p>
         <p>
-          I ship end-to-end. I design, write the copy, make the music, and vibe-code with AI to bring my apps to life — Figma, Swift, Unity, Blender, whatever the project needs. I&apos;m drawn to products with heart, where the interaction itself can make someone smile.
+          I build my apps from start to finish. I design the screens, write the words, make the music, and use AI to help me write the code, working in Figma, Swift, Unity, Blender, or whatever the project needs. I love making things that feel personal, where using the app can make someone smile.
         </p>
       </section>
 
-      {/* Currently — open to work callout */}
+      {/* Currently: open to work callout */}
       <section className="px-5 md:px-8 pb-20 max-w-2xl mx-auto">
         <div className="rounded-3xl bg-emerald-50 p-6 md:p-8">
           <div className="inline-flex items-center gap-2 mb-4 text-xs font-medium text-emerald-800">
