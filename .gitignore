@@ -43,3 +43,7 @@ next-env.d.ts
 ._*
 *.tmp
 .~lock.*#
+.DS_Store
+._*
+*.tmp
+.~lock.*#
