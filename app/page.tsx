@@ -27,8 +27,8 @@ const projects = [
     id: 3,
     title: "Student Testing Platform",
     description:
-      "Reimagining the student testing experience — making it less stressful for kids who are already anxious enough.",
-    tags: ["UX Research", "Figma", "Web"],
+      "My villain origin story: three years watching kindergartners fail a test that had nothing to do with what they knew. A concept redesign of a test that was measuring the wrong thing.",
+    tags: ["UX Research", "Concept Redesign", "Classroom Observation"],
     bg: "#EDE8F0",
     href: "/work/student-testing",
   },
