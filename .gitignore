@@ -47,3 +47,12 @@ next-env.d.ts
 ._*
 *.tmp
 .~lock.*#
+
+# raw/source media dropped in repo root (processed versions live in public/projects)
+/*.MOV
+/*.mov
+/*.mp4
+/*.png
+/*.jpg
+/*.jpeg
+/* copy.png
