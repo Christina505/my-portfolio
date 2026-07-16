@@ -57,7 +57,7 @@ export default function ResumePage() {
         <Section title="Skills">
           <div className="space-y-2">
             <SkillRow label="Design" items="Product Design, User Research, Interaction Design, Prototyping, Wireframing, Information Architecture, Usability Testing" />
-            <SkillRow label="Tools" items="Figma, SwiftUI, Xcode, Unity, Blender, VS Code, GarageBand, AI coding tools" />
+            <SkillRow label="Tools" items="Figma, SwiftUI, Xcode, Unity, Blender, VS Code, AI coding tools" />
             <SkillRow label="Other" items="Bilingual (English & Mandarin), Localization, Storytelling, Curriculum Design, Cross-Cultural Communication" />
           </div>
         </Section>

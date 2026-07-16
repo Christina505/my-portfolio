@@ -65,7 +65,7 @@ export default function About() {
           Teaching kindergarten is the best UX bootcamp I could&apos;ve asked for. Five-year-olds are the most honest users on earth. If a button doesn&apos;t make sense to them, they don&apos;t pretend it does — they cry. Designing for them taught me to obsess over the first three seconds of any interaction and to never take my own designs for granted.
         </p>
         <p>
-          I build my apps from start to finish. I design the screens, write the words, make the music, and use AI to help me write the code, working in Figma, Swift, Unity, Blender, or whatever the project needs. I love making things that feel personal, where using the app can make someone smile.
+          I build my apps from start to finish. I design the screens, write the words, and use AI to help me write the code, working in Figma, Swift, Unity, Blender, or whatever the project needs. I love making things that feel personal, where using the app can make someone smile.
         </p>
       </section>
 
