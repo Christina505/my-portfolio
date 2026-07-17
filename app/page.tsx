@@ -446,6 +446,7 @@ type PageFlip = {
 
 export default function Home() {
   const bookRef = useRef<{ pageFlip: () => PageFlip } | null>(null);
+  const starRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
   const [page, setPage] = useState(0);
   const [openIdx, setOpenIdx] = useState<number | null>(null);
@@ -479,6 +480,25 @@ export default function Home() {
     return () => cancelAnimationFrame(id);
   }, []);
 
+  // Pulsing-star cursor whenever hovering something clickable (replaces the hand).
+  useEffect(() => {
+    const star = starRef.current;
+    if (!star) return;
+    const isClickable = (t: EventTarget | null) =>
+      t instanceof Element && !!t.closest('a,button,[role="button"]');
+    const onMove = (e: MouseEvent) => {
+      star.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      star.classList.toggle("on", isClickable(e.target));
+    };
+    const onLeave = () => star.classList.remove("on");
+    window.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseleave", onLeave);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
+
   const next = () => bookRef.current?.pageFlip()?.flipNext();
   const prev = () => bookRef.current?.pageFlip()?.flipPrev();
 
@@ -495,6 +515,18 @@ export default function Home() {
   return (
     <main className="book-home">
       <style>{css}</style>
+
+      <div ref={starRef} className="star-cursor" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 2 L14.9 8.6 L22 9.2 L16.5 13.8 L18.3 20.8 L12 17 L5.7 20.8 L7.5 13.8 L2 9.2 L9.1 8.6 Z"
+            fill="#f4ecd6"
+            stroke="#1b2a32"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
 
       {openIdx !== null && (
         <CaseStudyOverlay
@@ -588,6 +620,27 @@ export default function Home() {
 }
 
 const css = `
+  /* playful paper-airplane cursor — hand-drawn sticker style (matches the rocket & stars) */
+  .book-home, .book-home *{
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='36' viewBox='0 0 44 40'%3E%3Cpath d='M6 6 L38 15 L24 20 L28 32 Z' fill='%23f4ecd6' stroke='%231b2a32' stroke-width='3.2' stroke-linejoin='round'/%3E%3Cpath d='M6 6 L24 20' fill='none' stroke='%231b2a32' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E") 6 6, auto;
+  }
+  /* over clickable things, hide the hand — a pulsing star follows instead */
+  .book-home a, .book-home button, .book-home [role="button"]{ cursor: none !important; }
+  .book-home .star-cursor{
+    position:fixed; left:0; top:0; width:24px; height:24px; margin:-12px 0 0 -12px;
+    pointer-events:none; z-index:9999; opacity:0; transition:opacity .12s ease;
+    will-change:transform;
+  }
+  .book-home .star-cursor.on{ opacity:1; }
+  .book-home .star-cursor svg{
+    display:block; width:24px; height:24px; transform-origin:center;
+    filter:drop-shadow(0 2px 3px rgba(60,40,15,.22));
+    animation:starPulse .85s ease-in-out infinite;
+  }
+  @keyframes starPulse{
+    0%,100%{ transform:scale(.72) rotate(-6deg); opacity:.75; }
+    50%{ transform:scale(1.08) rotate(6deg); opacity:1; }
+  }
   .book-home{
     --paper:#fbf3df; --ink:#4a3b2c; --soft:#9a8a72; --accent:#e0603f;
     font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
