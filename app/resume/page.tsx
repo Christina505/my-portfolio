@@ -11,18 +11,15 @@ export default function ResumePage() {
               <h1 className="text-lg md:text-xl font-medium tracking-tight mb-1">Christina Ma</h1>
             </Link>
             <p className="text-xs md:text-sm font-light text-gray-400 leading-relaxed max-w-lg hidden sm:block">
-              Product Designer in Irvine, CA. I teach kindergarten, so I design things that are intuitive for first-time users. If a five-year-old can figure it out, anyone can.
+              Product + Interaction Designer, Irvine CA. Designing playful, intuitive experiences.
             </p>
             <p className="text-xs font-light text-gray-400 leading-relaxed sm:hidden">
-              Product Designer in Irvine, CA
+              Product + Interaction Designer
             </p>
           </div>
           <div className="flex gap-4 md:gap-8 text-sm text-gray-400 pt-1 flex-shrink-0">
             <Link href="/" className="hover:text-black transition-colors">
               Work
-            </Link>
-            <Link href="/about" className="hover:text-black transition-colors">
-              About
             </Link>
             <span className="text-black font-medium">
               Resume

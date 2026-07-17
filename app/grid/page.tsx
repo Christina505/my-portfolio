@@ -338,9 +338,6 @@ export default function Grid() {
           </div>
           <div className="flex gap-4 md:gap-8 text-sm text-gray-400 pt-1 flex-shrink-0">
             <span className="text-black font-medium">Work</span>
-            <Link href="/about" className="hover:text-black transition-colors">
-              About
-            </Link>
             <Link href="/resume" className="hover:text-black transition-colors">
               Resume
             </Link>
